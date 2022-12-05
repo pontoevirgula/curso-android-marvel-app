@@ -3,7 +3,9 @@ buildscript {
     ext.kotlin_version = "1.7.10"
     ext.nav_version = '2.4.1'
     ext.hilt_version = '2.43.2'
+    ext.detekt_version = '1.22.0'
     repositories {
+        gradlePluginPortal()
         google()
         mavenCentral()
     }
@@ -12,11 +14,18 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+        classpath "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:$detekt_version"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
+
+apply plugin: "io.gitlab.arturbosch.detekt"
+
+//plugins{
+//    id("io.gitlab.arturbosch.detekt").version("$detekt_version")
+//}
 
 allprojects {
     repositories {
