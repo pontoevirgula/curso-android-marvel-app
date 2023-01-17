@@ -1,4 +1,4 @@
-package com.example.marvelapp.core.network.response
+package com.example.core.network.response
 
 data class DataContainerResponse(
     val results: List<CharacterResponse>
