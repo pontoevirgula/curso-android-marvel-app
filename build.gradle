@@ -21,11 +21,9 @@ buildscript {
     }
 }
 
-apply plugin: "io.gitlab.arturbosch.detekt"
-
-//plugins{
-//    id("io.gitlab.arturbosch.detekt").version("$detekt_version")
-//}
+plugins{
+    id("io.gitlab.arturbosch.detekt").version("$detekt_version")
+}
 
 allprojects {
     repositories {
