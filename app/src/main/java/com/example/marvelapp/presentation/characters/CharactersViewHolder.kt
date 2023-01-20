@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.core.domain.model.Character
+import com.example.core.domain.model.CharacterItem
 import com.example.marvelapp.R
 import com.example.marvelapp.databinding.ItemCharacterBinding
 
@@ -12,7 +12,7 @@ class CharactersViewHolder(
     private val itemCharacterBinding: ItemCharacterBinding
 ) : RecyclerView.ViewHolder(itemCharacterBinding.root) {
 
-    fun bind(character : Character){
+    fun bind(character : CharacterItem){
         itemCharacterBinding.nameCharacter.text = character.name
         Glide.with(itemView)
             .load(character.imageUrl)

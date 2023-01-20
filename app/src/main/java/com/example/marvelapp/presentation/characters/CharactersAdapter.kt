@@ -3,9 +3,9 @@ package com.example.marvelapp.presentation.characters
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import com.example.core.domain.model.Character
+import com.example.core.domain.model.CharacterItem
 
-class CharactersAdapter : ListAdapter<Character, CharactersViewHolder>(diffCallback) {
+class CharactersAdapter : ListAdapter<CharacterItem, CharactersViewHolder>(diffCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharactersViewHolder =
         CharactersViewHolder.create(parent)
@@ -17,17 +17,17 @@ class CharactersAdapter : ListAdapter<Character, CharactersViewHolder>(diffCallb
     }
 
     companion object {
-        private val diffCallback = object : DiffUtil.ItemCallback<Character>() {
+        private val diffCallback = object : DiffUtil.ItemCallback<CharacterItem>() {
             override fun areItemsTheSame(
-                oldItem: Character,
-                newItem: Character
+                oldItem: CharacterItem,
+                newItem: CharacterItem
             ): Boolean {
                 return oldItem.name == newItem.name
             }
 
             override fun areContentsTheSame(
-                oldItem: Character,
-                newItem: Character
+                oldItem: CharacterItem,
+                newItem: CharacterItem
             ): Boolean {
                 return oldItem == newItem
             }
