@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MarvelAppMirror</string>
+    <string name="app_name">MarvelApp</string>
     <string name="common_no_internet_connection">Sem conexão com internet</string>
     <string name="common_try_again">Tente novamente</string>
 

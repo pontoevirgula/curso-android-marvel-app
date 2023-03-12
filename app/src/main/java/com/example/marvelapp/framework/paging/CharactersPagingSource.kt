@@ -5,6 +5,7 @@ import androidx.paging.PagingState
 import com.example.core.data.repository.CharactersRemoteDataSource
 import com.example.core.domain.model.CharacterItem
 import com.example.marvelapp.framework.network.response.DataWrapperResponse
+import com.example.marvelapp.framework.network.response.toCharacterModel
 
 class CharactersPagingSource(
     private val queryStartWith: String,

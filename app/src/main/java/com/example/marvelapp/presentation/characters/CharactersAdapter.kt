@@ -1,11 +1,11 @@
 package com.example.marvelapp.presentation.characters
 
 import android.view.ViewGroup
+import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import com.example.core.domain.model.CharacterItem
 
-class CharactersAdapter : ListAdapter<CharacterItem, CharactersViewHolder>(diffCallback) {
+class CharactersAdapter : PagingDataAdapter<CharacterItem, CharactersViewHolder>(diffCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharactersViewHolder =
         CharactersViewHolder.create(parent)

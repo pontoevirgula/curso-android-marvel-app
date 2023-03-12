@@ -9,15 +9,18 @@ import com.example.marvelapp.R
 import com.example.marvelapp.databinding.ItemCharacterBinding
 
 class CharactersViewHolder(
-    private val itemCharacterBinding: ItemCharacterBinding
+    itemCharacterBinding: ItemCharacterBinding
 ) : RecyclerView.ViewHolder(itemCharacterBinding.root) {
 
+    private val nameCharacter = itemCharacterBinding.textName
+    private val imageCharacter = itemCharacterBinding.imageCharacter
+
     fun bind(character : CharacterItem){
-        itemCharacterBinding.nameCharacter.text = character.name
+        nameCharacter.text = character.name
         Glide.with(itemView)
             .load(character.imageUrl)
             .fallback(R.drawable.ic_img_loading_error)
-            .into(itemCharacterBinding.imageCharacter)
+            .into(imageCharacter)
     }
 
     companion object{
